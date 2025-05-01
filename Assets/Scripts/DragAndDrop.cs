@@ -63,6 +63,8 @@ public class DragAndDrop : MonoBehaviour
     {
         if (!IsClickOnObject()) return;
         
+        GameManager.Instance.SetSomethingDragging(true);
+        
         _audioSource.PlayOneShot(pickUpSound);
 
         _spriteRenderer.sortingOrder += 1;
@@ -90,6 +92,8 @@ public class DragAndDrop : MonoBehaviour
     private void OnMouseUp()
     {
         if (!_isDragging) return;
+        
+        GameManager.Instance.SetSomethingDragging(false);
         
         _audioSource.PlayOneShot(putSound);
         

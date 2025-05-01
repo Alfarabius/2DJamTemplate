@@ -7,21 +7,26 @@ public class Item : MonoBehaviour
 {
     [SerializeField] private string id = "item";
     [SerializeField] private string description = "This is an item description.";
-    
-    private DragAndDrop _dragAndDrop;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
-        _dragAndDrop = GetComponent<DragAndDrop>();
+        _audioSource = GetComponent<AudioSource>();
+    }
+
+    private void OnMouseEnter()
+    {
+        if (GameManager.Instance.IsSomethingDragging())
+            return;
+        
+        GameManager.Instance.SetCursorHovered(true);
+        GameManager.Instance.PlayNextHoverSound(_audioSource);
     }
 
     private void OnMouseOver()
     {
-        if (_dragAndDrop.IsDragging())
-        {
-            
+        if (GameManager.Instance.IsSomethingDragging())
             return;
-        }
         
         System.Func<string> getTooltipTextFunc = () => $"{id} \n{description}";
         TooltipScreenSpaceUI.ShowTooltip_Static(getTooltipTextFunc);
@@ -29,6 +34,7 @@ public class Item : MonoBehaviour
 
     private void OnMouseExit()
     {
+        GameManager.Instance.SetCursorHovered(false);
         TooltipScreenSpaceUI.HideTooltip_Static();
     }
 }
