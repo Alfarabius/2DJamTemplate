@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3979f5371e1ef7f42aa0d581a5cafec1
+guid: 6608a0fbe2250f1459245b3224473819
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,49 +120,20 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  animatedSpriteImportData:
-  - name: SibJam
-    originalName: 
-    pivot: {x: 1.4528302, y: -1.328889}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 318
-      height: 225
-    spriteID: 97235c4f45f241840bcf305070764538
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+  animatedSpriteImportData: []
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1474980028
-    name: SibJam
+    guid: -718866205
+    name: Back
     layerFlags: 0
     layerType: 0
     blendMode: 0
-    cells:
-    - name: SibJam
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 18
-        y: 299
-        width: 318
-        height: 225
-      spriteId: 97235c4f45f241840bcf305070764538
+    cells: []
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 960, y: 540}
+  canvasSize: {x: 1280, y: 840}
