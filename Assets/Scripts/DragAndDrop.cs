@@ -32,6 +32,9 @@ public class DragAndDrop : MonoBehaviour
 
     private void Start()
     {
+        if (!scatter)
+            scatter = FindObjectOfType<BorderParticleScatter>();
+        
         _audioSource = GetComponent<AudioSource>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _mainCamera = Camera.main;
